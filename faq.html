@@ -1,0 +1,324 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Recovery Squad - FAQ's</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link
+    href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&family=Dosis:wght@200;300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+    <script src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" data-auto-a11y="true"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0px;
+            font-family: Rubik;
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+        }
+
+        #name {
+            display: flex;
+            align-items: center;
+            margin-left: 20px;
+        }
+
+        h1 {
+            font-family: Bebas Neue;
+            letter-spacing: 1px;
+            font-size: 40px;
+        }
+
+        .nav-link {
+            font-size: 20px;
+            padding: 0 20px 0 20px;
+            margin: 10px;
+            border-width: 2px;
+            border-style: solid;
+        }
+
+        #nav-div {
+            height: 80px;
+            width: 100%;
+            top: 0;
+            position: fixed;
+            background-color: white;
+        }
+
+        #nav-bar {
+            height: inherit;
+            display: flex;
+        }
+
+        .container {
+            width: 100%;
+            height: inherit;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .nav-text {
+            height: 100%;
+            display: flex;
+            align-items: center;
+        }
+
+        #Top-heading {
+            margin-top: 100px;
+            text-align: center;
+            font-size: 65px;
+        }
+
+        .main {
+            width: 70%;
+            margin: 0 auto;
+            padding-top: 100px;
+        }
+
+        .faq div {
+            border: 1px solid #000;
+            margin: 5px 0px;
+            background-color: #fff;
+        }
+
+        .question {
+            font-size: 36px;
+            background-color: #ddd;
+            margin: 0px;
+            padding: 15px;
+            border: 0.1px solid;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .answer {
+            font-size: 24px;
+            margin: 0px;
+            padding: 0px 15px;
+            line-height: 2;
+            max-height: 0px;
+            overflow: hidden;
+            transition: 2s;
+        }
+
+        #three-bars {
+            position: absolute;
+        }
+        @media screen and (max-width: 1250px) {
+            .answer{
+                font-size: 18px;
+            }
+        }
+        .opener {
+            font-size: 25px;
+            float: right;
+            line-height: 0.8;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        #last {
+            margin-top: -7px;
+        }
+
+        #heading {
+            text-align: center;
+            font-family: 'Source Sans Pro', sans-serif;
+            font-family: 30px;
+        }
+
+        #nav-opacity {
+            margin-top: calc(-100vmax - 80px);
+            transition-timing-function: ease-in;
+            transition: 0.6s;
+            position: fixed;
+        }
+        
+        @media screen and (max-width: 950px) {
+            #nav-bar {
+                visibility: hidden;
+                position: absolute;
+                display: none;
+            }
+
+            h1 {
+                font-size: 40px;
+                margin-left: -20px;
+            }
+
+            .container {
+                justify-content: center;
+                align-items: center;
+            }
+
+            #three-bars {
+                margin-top: -4px;
+                position: absolute;
+                left: 5px;
+                background-color: transparent;
+                border-color: transparent;
+            }
+
+            .bar {
+                margin: 6px;
+                height: 5px;
+                width: 40px;
+                border-radius: 5px;
+                background-color: black;
+            }
+
+            #nav-bar-2 {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .nav-link-2 {
+                color: white;
+                font-size: 30px;
+                margin-top: 15px;
+                margin-bottom: 15px;
+            }
+        }
+    </style>
+</head>
+
+<body id="body">
+    <header id="header">
+        <div id="nav-opacity">
+            <nav id="nav-bar-2">
+                <a href="lf.html" class="nav-link-2">Lost & Found</a>
+                <a href="faq.html" class="nav-link-2">FAQ's</a>
+                <a href="hych.html" class="nav-link-2">How you can help</a>
+                <a href="about-us.html" id="about-us" class="nav-link-2">About Us</a>
+            </nav>
+        </div>
+        <div id="nav-div">
+            <div class="container">
+                <button id="three-bars" onclick="shown ? hideNavbar() : showNavbar()">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </button>
+                <a id="name" href="index.html">
+                    <h1>Recovery Squad</h1>
+                </a>
+                <nav id="nav-bar">
+                    <a href="lf.html" class="nav-link"><span class="nav-text">Lost & Found</span></a>
+                    <a href="faq.html" class="nav-link"><span class="nav-text">FAQ's</span></a>
+                    <a href="hych.html" class="nav-link"><span class="nav-text">How you can help</span></a>
+                    <a href="about-us.html" id="about-us" class="nav-link"><span class="nav-text">About Us</span></a>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <div class="main">
+
+        <h1 id="heading">FAQ's</h1>
+        <br>
+        <hr>
+        <br>
+        <div>
+            <p class="question">Who are we?<span onclick='faq(this)' class="opener">+</span></p>
+            <p class="answer">We are a group of innovators who want to make a change in the world. We have come up with
+                an idea to control the after effect of natural disasters especially in rural places of the world.</p>
+        </div>
+        <div>
+            <p class="question">How do we plan on doing this?<span onclick='faq(this)' class="opener">+</span></p>
+            <p class="answer">We have already made a working website to help solve our problem. The features on our
+                website include a lost and found page and a FAQ page to solve any problems you might have. We have also
+                included many useful ways to enrich your knowledge on current natural disasters around the world. We
+                also have a page specially dedicated to how you can volunteer your time and efforts for our cause.</p>
+        </div>
+
+        <div>
+            <p class="question">Why natural disasters?<span onclick='faq(this)' class="opener">+</span></p>
+            <p class="answer"> While viewing our website a thought might come to your mind, why natural disasters? Well,
+                let me answer your question, natural disasters kill approximately 60,000 people and impact millions of
+                lives directly each year, we want to make the after effect of natural disasters less traumatic for
+                people affected by it, and therefore we made this website.</p>
+        </div>
+        <div>
+            <p class="question">How do we help the people?<span onclick='faq(this)' class="opener">+</span></p>
+            <p class="answer">We are helping people by taking a description of any personal item that they might have
+                misplaced at the time of the disaster. The description can then be directed to the local authorities and
+                using that a few volunteers can search for the missing item to see if they can retrieve it. Also, people
+                may lose contact with their loved ones so we are also open to taking responses from them regarding their
+                description and appearance to help find them again.</p>
+        </div>
+        <div>
+            <p class="question">How can you volunteer?<span onclick='faq(this)' class="opener">+</span></p>
+            <p class="answer">If you are close to the site of the disaster, you are more than welcome to help! There is
+                a page on our website which will direct you to volunteer for the lost and found program. You can
+                volunteer to search the site for any missing items or go on search hunts to find missing people!
+                Everything will be conducted safely as we don't you getting hurt!
+            </p>
+        </div>
+        <div>
+            <p class="question">How do we check the authenticity of the user?<span onclick='faq(this)'
+                    class="opener">+</span></p>
+            <p class="answer">We do a thorough background check of all the users. They will have to provide enough
+                information about themselves as well as their knowledge on the object to retrieve the item. We can also
+                contact authorities if we have suspicion of foul play.</p>
+        </div>
+        <div>
+            <p class="question">Is it paid to volunteer or to put in a request for an item?<span onclick='faq(this)'
+                    class="opener">+</span></p>
+            <p class="answer">If you are just looking for a single item, it is completely free, but if you want to find
+                more than one item, and we are successful in locating it, then we will be needing a minimal fee from you
+                depending on your item and other factors.</p>
+        </div>
+        <div>
+            <p class="question">Where all are we currently located?<span onclick='faq(this)' class="opener">+</span></p>
+            <p class="answer">Right now we are focusing on places in India, but we might expand to other countries in
+                the near future.</p>
+        </div>
+        <div>
+            <p class="question">How much time will it take to retrieve the item or at least start the process?<span
+                    onclick='faq(this)' class="opener">+</span></p>
+            <p class="answer">Depending on what you want to find and the amount of volunteers available, the time take
+                to find your item may vary. However, all processes will be started by maximum two weeks from the date of
+                registration.</p>
+        </div>
+        <div>
+            <p class="question">Why would you trust us?<span
+                    onclick='faq(this)' class="opener" id="last">+</span></p>
+            <p class="answer">Putting your trust in someone can be a tough task to do, especially after going through a natural disaster. But we urge you to take the leap of faith as we provide top technology to match your needs, aside from the various functions we offer. We genuinely want to help you and look forward to working with you!</p>
+        </div>
+        <br>
+        <br>
+        <hr>
+        <br>
+        <br>
+
+    </div>
+
+    <script>
+        var shown = false;
+        function showNavbar() {
+            shown = true;
+            document.getElementById('nav-opacity').style.cssText = 'background-color:black;opacity:0.9;height:100vmax;width:100vmin;margin-top:80px;'
+        }
+
+        function hideNavbar() {
+            shown = false;
+            document.getElementById('nav-opacity').style.cssText = 'height:0vmax;width:100vmin;margin-top:calc(-100vmax - 80px);'
+        }
+        function faq(ele) {
+            var x = ele.parentElement.nextElementSibling.style.cssText;
+            if (x == 'max-height: 500px;') {
+                ele.style.cssText = 'transform: rotate(0deg);';
+                ele.parentElement.nextElementSibling.style.cssText = "transition:0.3s;max-height:0px;";
+            }
+            else {
+                ele.style.cssText = 'transform: rotate(45deg);';
+                ele.parentElement.nextElementSibling.style.cssText = "max-height:500px;";
+            }
+        }
+    </script>
+</body>
+
+</html>

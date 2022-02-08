@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Recovery Squad - Homepage</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link
+    href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&family=Dosis:wght@200;300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0px;
+            font-family: Rubik;
+            transition: 0.3s;
+
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+        }
+
+        #name {
+            position: absolute;
+            left: 20px;
+            top: 15.8px;
+        }
+
+        h1 {
+            font-family: Bebas Neue;
+            letter-spacing: 1px;
+            font-size: 40px;
+        }
+
+        .nav-link {
+            font-size: 20px;
+            padding: 0 20px 0 20px;
+            margin: 10px;
+            border-width: 2px;
+            border-style: solid;
+        }
+
+        #nav-div {
+            height: 80px;
+            width: 100%;
+            top: 0;
+            position: fixed;
+            background-color: white;
+            z-index: 20;
+        }
+
+        #nav-bar {
+            height: inherit;
+            display: flex;
+        }
+
+        #effects {
+            font-family: 'Dosis', sans-serif;
+        }
+
+        .container {
+            width: 100%;
+            height: inherit;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .nav-text {
+            height: 100%;
+            display: flex;
+            align-items: center;
+        }
+
+        img {
+            margin-top: 80px;
+            width: 100vmax;
+            height: calc(100vmin - 80px);
+            transition: 0s;
+        }
+
+        #img-statement > h2 {
+            position: absolute;
+            top: 30vmin;
+            color: rgb(27, 27, 27);
+            font-weight: 700;
+            font-size: 40px;
+            width: 750px;
+            right: 20px;
+            direction: rtl;
+        }
+
+        h4 {
+            position: absolute;
+            top: 44vmin;
+            color: rgb(34, 34, 34);
+            font-weight: 400;
+            font-size: 35px;
+            width: 500px;
+            right: 20px;
+            direction: rtl;
+        }
+
+        @media screen and (max-width: 1500px) {
+            #stat-divs {
+                flex-direction: row;
+                display: flex;
+                justify-content: space-evenly;
+                scale: 0.7;
+            }
+        }
+
+        #h1stat {
+            margin-top: 10px;
+            margin-left: 10px;
+            text-decoration: underline;
+            text-align: center;
+        }
+
+        @media screen and (max-width: 10000px){
+            #stat-divs {
+                margin-top: 60px;
+                margin-bottom: 70px;
+                margin-left: auto;
+                margin-right: auto;
+                width: 700px;
+                display: flex;
+                justify-content: space-evenly; 
+            }
+        }
+
+        .column {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-left: 30px;
+            margin-right: 30px;
+        }
+
+        .stat-div {
+            margin-left: 90px;
+            margin-right: 90px;
+            padding: 20px;
+            scale: 1.5;
+            background:
+                linear-gradient(to right, red 2px, transparent 2px) 0 0,
+                linear-gradient(to right, red 2px, transparent 2px) 0 100%,
+                linear-gradient(to left, red 2px, transparent 2px) 100% 0,
+                linear-gradient(to left, red 2px, transparent 2px) 100% 100%,
+                linear-gradient(to bottom, red 2px, transparent 2px) 0 0,
+                linear-gradient(to bottom, red 2px, transparent 2px) 100% 0,
+                linear-gradient(to top, red 2px, transparent 2px) 0 100%,
+                linear-gradient(to top, red 2px, transparent 2px) 100% 100%;
+            background-repeat: no-repeat;
+            background-size: 20px 20px;
+        }
+
+        .column>p {
+            text-align: center;
+            width: 200px;
+            font-size: 15px;
+        }
+
+        .column>h2 {
+            font-size: 30px;
+        }
+
+        input[type=email],
+        select,
+        textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            margin-top: 6px;
+            margin-bottom: 16px;
+
+        }
+
+        input[type=text],
+        select,
+        textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            margin-top: 6px;
+            margin-bottom: 16px;
+
+        }
+
+        input[type=button] {
+            background-color: #04AA6D;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        input[type=submit]:hover {
+            background-color: #45a049;
+        }
+
+        #contact-us {
+            font-family: 'Roboto Slab', serif;
+        }
+
+        #contact {
+            margin: 20px;
+        }
+
+        .stats {
+            width: 100%;
+        }
+
+        #nav-opacity {
+            margin-top: calc(-100vmax - 80px);
+            transition-timing-function: ease-in;
+            transition: 0.6s;
+            position: fixed;
+            z-index: 20;
+        }
+
+        @media screen and (max-width: 1000px) {
+
+            #img-statement>h2 {
+                font-size: 30px;
+                width: 500px;
+                background-color: rgba(255, 255, 255, 0.884);
+                padding: 5px;
+                top: 25vmin;
+            }
+
+            h4{
+                font-size: 20px;
+                width: 350px;
+                background-color: rgba(255, 255, 255, 0.884);
+                padding: 5px;
+                right: 20px;
+                position: absolute;
+                top: 40vmin;
+            }
+
+            #nav-bar {
+                visibility: hidden;
+                position: absolute;
+                display: none;
+            }
+
+            #name {
+                top: auto;
+                margin-left: -20px;
+                position: relative;
+            }
+
+            .container {
+                justify-content: center;
+                align-items: center;
+            }
+
+            #three-bars {
+                margin-top: -4px;
+                position: absolute;
+                left: 5px;
+                background-color: transparent;
+                border-color: transparent;
+            }
+
+            .bar {
+                margin: 6px;
+                height: 5px;
+                width: 40px;
+                border-radius: 5px;
+                background-color: black;
+            }
+
+            #nav-bar-2 {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .nav-link-2 {
+                color: white;
+                font-size: 30px;
+                margin-top: 15px;
+                margin-bottom: 15px;
+            }
+
+            #stat-divs {
+                flex-direction: column;
+                display: contents;
+                justify-content: space-around;
+            }
+
+            .stat-div {
+                margin-top: 40px;
+                padding: 5px;
+                margin-bottom: 50px;
+                scale: 1.2;
+            }
+
+        }
+        
+    </style>
+    <script>
+        var shown = false;
+        function showNavbar() {
+            shown = true;
+            document.getElementById('nav-opacity').style.cssText = 'background-color:black;opacity:0.9;height:100vmax;width:100vmin;margin-top:80px;'
+        }
+
+        function hideNavbar() {
+            shown = false;
+            document.getElementById('nav-opacity').style.cssText = 'height:0vmax;width:100vmin;margin-top:calc(-100vmax - 80px);'
+        }
+        function submitForm() {
+            var con = document.getElementsByName('contact-form')[0];
+            con.submit();
+            con.reset();
+            return false;
+        }
+    </script>
+</head>
+
+<body id="body">
+    <header id="header">
+        <div id="nav-opacity">
+            <nav id="nav-bar-2">
+                <a href="lf.html" class="nav-link-2">Lost & Found</a>
+                <a href="faq.html" class="nav-link-2">FAQ's</a>
+                <a href="hych.html" class="nav-link-2">How you can help</a>
+                <a href="about-us.html" id="about-us" class="nav-link-2">About Us</a>
+            </nav>
+        </div>
+        <div id="nav-div">
+            <div class="container">
+                <button id="three-bars" onclick="shown ? hideNavbar() : showNavbar()">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </button>
+                <a id="name" href="index.html">
+                    <h1>Recovery Squad</h1>
+                </a>
+                <nav id="nav-bar">
+                    <a href="lf.html" class="nav-link"><span class="nav-text">Lost & Found</span></a>
+                    <a href="faq.html" class="nav-link"><span class="nav-text">FAQ's</span></a>
+                    <a href="hych.html" class="nav-link"><span class="nav-text">How you can help</span></a>
+                    <a href="about-us.html" id="about-us" class="nav-link"><span class="nav-text">About Us</span></a>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <div id="main">
+        <div id="img-statement">
+            <h2 id="effects">The after effects of a natural disaster are very traumatic for everyone</h2>
+            <h4 id="effects">Read ahead to find out how we tackle this issue</h4>
+        </div>
+        <img src="https://www.munichre.com/content/dam/munichre/mrm/royalty-free-shutterstock/shutterstock_130759928.jpg/_jcr_content/renditions/cropped.3_to_1.jpg./cropped.3_to_1.jpg"
+            alt="">
+    </div>
+    <br>
+    <hr>
+    <div class="stats">
+        <h1 id="h1stat">World Wide Statistics:</h1>
+        <div id="stat-divs">
+            <div class="stat-div">
+                    <div class="column">
+                        <h2>60,000</h2>
+                        <p>People die due to natural disasters every year.</p>
+                    </div>
+            </div>
+            <div class="stat-div">
+                    <div class="column">
+                        <h2>20 million</h2>
+                        <p>People are affected by natural disasters every year.</p>
+                    </div>
+            </div>
+            <div class="stat-div">
+                    <div class="column">
+                        <h2>200,00</h2>
+                        <p>People are left homeless after a natural disaster.</p>
+                    </div>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div id="contact">
+        <h1 id="contact-us">Contact Us!</h1>
+        <br>
+        <form name="contact-form" action="https://getform.io/f/87b643bd-b5b0-46dd-a95e-519f77371de7" method="POST">
+            <label for="username">Name</label>
+            <input type="text" id="username" name="name" placeholder="Your name..">
+
+            <label for="email">Email ID</label>
+            <input type="email" id="email" name="email" placeholder="Your email..">
+
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" name="subject" placeholder="Your subject..">
+
+            <label for="body">Your Queries/Feedback</label>
+            <textarea id="body" name="body" placeholder="Write something.." style="height:200px"></textarea>
+
+            <input type="button" value="Submit" onclick="submitForm()">
+        </form>
+    </div>
+    <hr>
+    <br>
+</body>
+
+</html>
+
